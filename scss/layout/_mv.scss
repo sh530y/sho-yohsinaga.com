@@ -12,13 +12,6 @@ style
   height: 100svh;
   color: #fff;
   overflow: hidden;
-  &__splide {
-    position: fixed;
-    top: 0;
-    z-index: -1;
-    height: 100vh;
-    height: 100svh;
-  }
   &__bg {
     position: absolute;
     top: 0;

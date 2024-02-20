@@ -792,13 +792,6 @@ style
   color: #fff;
   overflow: hidden;
 }
-.mv__splide {
-  position: fixed;
-  top: 0;
-  z-index: -1;
-  height: 100vh;
-  height: 100svh;
-}
 .mv__bg {
   position: absolute;
   top: 0;

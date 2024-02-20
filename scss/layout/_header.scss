@@ -1,0 +1,37 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 23px 0;
+  color: white;
+  transition: all $duration-fast, color 0ms;
+  &__inner {
+    @include flex-space-between;
+    height: 4.333em;
+    width: $width-cont-sp;
+    margin: 0 auto;
+    transition: all $duration-fast;
+    @include media-tb {
+      width: 94vw;
+    }
+  }
+  &__logo,
+  &__menu-btn {
+    z-index: 999;
+  }
+  &.bg-wh,
+  &.nav-open {
+    padding: 0;
+    color: $color-black;
+    background-color: white;
+    border-bottom: 1px solid $color-black-20;
+  }
+}

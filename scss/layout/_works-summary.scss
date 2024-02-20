@@ -1,0 +1,25 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.works-summary {
+  &__txt {
+    @include font-ja;
+  }
+  &__desc {
+    @include font-sans;
+    color: $color-black-60;
+    margin-top: 3em;
+    line-height: 2em;
+    @include media-tb {
+      font-size: 0.857em;
+    }
+  }
+  &__full-img {
+    margin-top: 5.333em;
+    border: 1px solid $color-black-05;
+  }
+}

@@ -1,0 +1,23 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  @include font-serif;
+  font-size: 1.5em;
+  gap: 0.3em;
+  &__mark {
+    height: 2.5em;
+    width: auto;
+    fill: currentColor;
+  }
+  &__name {
+    white-space: nowrap;
+  }
+}

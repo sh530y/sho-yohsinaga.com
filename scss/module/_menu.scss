@@ -1,0 +1,47 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.menu {
+  display: flex;
+  flex-direction: column;
+  @include animated-link;
+  @include media-tb {
+    flex-direction: row;
+    gap: 2.5vw;
+  }
+  &__link {
+    display: inline-block;
+    &:hover {
+      .menu__txt {
+        transform: translateY(-120%);
+        * {
+          opacity: 0;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &--global {
+    .menu__item {
+      margin-bottom: 1.5em;
+    }
+    .menu__txt::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &--footer {
+    .menu__item {
+      margin-bottom: 1em;
+      @include media-tb {
+        margin: 0;
+      }
+    }
+  }
+}

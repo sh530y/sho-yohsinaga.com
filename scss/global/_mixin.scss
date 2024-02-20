@@ -1,0 +1,133 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "./var" as *;
+/*---------------------------
+mixins
+----------------------------*/
+// media query
+@mixin media-tb {
+  @media screen and (min-width: ($breakpont-tb)) {
+    @content;
+  }
+}
+@mixin media-pc {
+  @media screen and (min-width: ($breakpont-pc)) {
+    @content;
+  }
+}
+
+// fonts
+@mixin font-ja {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400; // 100 ~ 900
+  letter-spacing: 0.06em;
+  line-height: 2.25em;
+  opacity: 0.86;
+}
+@mixin font-min {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+}
+@mixin font-serif {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500; // 400, 500
+  letter-spacing: 0.04em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+@mixin font-sans {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 350;
+  letter-spacing: 0.04em;
+}
+@mixin sub-text {
+  opacity: 0.6;
+}
+
+//position
+@mixin xy-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin x-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin y-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-end {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// animation
+@mixin animated-link {
+  &__txt-wrap,
+  &__ttl-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  &__txt,
+  &__txt *,
+  &__txt::after,
+  &__ttl,
+  &__ttl *,
+  &__ttl::after {
+    transition: transform 650ms $cb-2, opacity $duration-slow;
+  }
+  &__txt::after,
+  &__ttl::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 120%;
+    left: 0;
+    opacity: 0;
+  }
+}
+@mixin btn-animation {
+  .btn {
+    &__txt {
+      transform: translateY(-120%);
+      * {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 1;
+      }
+    }
+    &__arrow {
+      animation: more-btn__arrow $duration-slow $cb-1;
+    }
+  }
+}
+@keyframes btn__arrow {
+  40%,
+  50% {
+    opacity: 0;
+  }
+  43% {
+    transform: translateX(105%) scaleY(0.1);
+  }
+  44%,
+  50% {
+    transform: translateX(-145%) scaleY(0.1);
+  }
+  100% {
+    transform: translateX(0) scaleY(1);
+  }
+}

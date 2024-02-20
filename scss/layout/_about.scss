@@ -1,0 +1,45 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.about {
+  display: flex;
+  flex-direction: column;
+  @include media-tb {
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 8%;
+  }
+  &__img-wrap {
+    width: 61.8%;
+    margin: 0 auto;
+    @include media-tb {
+      width: 250px;
+      margin: 0;
+    }
+  }
+
+  &__body {
+    @include media-tb {
+      width: 40%;
+    }
+  }
+  &__name {
+    @include font-serif;
+    font-size: 1.667em;
+    margin-top: 2.3em;
+    @include media-tb {
+      font-size: 1.5em;
+      margin-top: 0;
+    }
+  }
+  &__txt {
+    @include font-min;
+    margin-top: 1.618em;
+    text-align: left;
+  }
+}

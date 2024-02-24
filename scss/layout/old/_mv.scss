@@ -1,0 +1,79 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.mv {
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  height: 100svh;
+  color: #fff;
+  overflow: hidden;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    height: 100svh;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    &::after {
+      //オーバーレイ
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000620;
+      mix-blend-mode: multiply;
+      opacity: 0.25;
+    }
+  }
+  &__movie {
+    min-height: 100%;
+    min-width: 100%;
+  }
+  &__ttl {
+    position: absolute;
+    @include xy-center;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1;
+    &--sub-page {
+      width: 100%;
+    }
+  }
+  &__ttl-main {
+    @include font-serif;
+    font-size: 3.833em;
+    white-space: nowrap;
+    &--sub-page {
+      font-size: 3em;
+    }
+  }
+  &__ttl-desc {
+    @include font-sans;
+    font-size: 1em;
+    opacity: 0.8;
+    margin-top: 0.75em;
+  }
+  &__scroll {
+    position: absolute;
+    bottom: 3em;
+    right: calc((100vw - $width-cont-sp) / 2);
+  }
+  &--sub-page {
+    height: 66.666vw;
+    margin-top: 52px;
+    @include media-tb {
+      height: 66.666vh;
+    }
+  }
+}

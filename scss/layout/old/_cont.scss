@@ -16,7 +16,7 @@ style
     background-color: $color-dark-gary;
   }
   &__inner {
-    width: $width-cont-sp;
+    width: $width-wrap;
     margin: 0 auto;
     padding: 8em 0;
     @include media-tb {

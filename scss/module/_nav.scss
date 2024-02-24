@@ -1,0 +1,94 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.nav {
+  @include font-sans;
+  font-size: 1.4rem;
+  @include media-sp {
+    font-size: 1.3rem;
+  }
+  &--global {
+    @include media-tb {
+      @include flex-center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100svh;
+      background-color: $color-light-gary;
+      visibility: hidden;
+      opacity: 0;
+    }
+    &.nav-open {
+      @include media-tb {
+        visibility: visible;
+        opacity: 1;
+        //開く時の挙動
+        transition: transform $duration-slow $cb-2, visibility $duration-slow,
+          opacity $duration-slow, color $duration-fast;
+      }
+    }
+    &.transition {
+      //閉じる時の挙動
+      transition: transform $duration-slow $cb-2, visibility $duration-slow,
+        opacity $duration-slow $dellay-fast, color $duration-fast;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    @include media-tb {
+      flex-direction: column;
+    }
+    &--global {
+      @include media-tb {
+        transform: translate(1em);
+        opacity: 0;
+        &.transition {
+          //閉じる時の挙動
+          transition: transform $duration-slow $cb-2, opacity $duration-slow, color $duration-fast;
+        }
+      }
+      &.nav-open {
+        @include media-tb {
+          opacity: 1;
+          transform: translate(0);
+          //開く時の挙動
+          transition: transform $duration-slow $dellay-fast $cb-2,
+            opacity $duration-slow $dellay-fast, color $duration-fast;
+        }
+      }
+    }
+  }
+  &__menu,
+  &__sns,
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    gap: 2.5em;
+    @include media-tb {
+      flex-direction: column;
+    }
+  }
+  &__sns {
+    .nav__item {
+      &:first-child::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 1em;
+        margin: 0 1.2em;
+        background-color: currentColor;
+        opacity: 0.5;
+      }
+    }
+  }
+}

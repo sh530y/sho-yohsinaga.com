@@ -7,38 +7,39 @@ style
 ----------------------------*/
 .about {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 8%;
   @include media-tb {
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-    gap: 8%;
+    flex-direction: column;
   }
   &__img-wrap {
-    width: 61.8%;
-    margin: 0 auto;
+    width: 250px;
+    margin: 0;
     @include media-tb {
-      width: 250px;
-      margin: 0;
+      width: 61.8%;
+      margin: 0 auto;
     }
   }
 
   &__body {
+    width: 40%;
     @include media-tb {
-      width: 40%;
+      width: 100%;
     }
   }
   &__name {
     @include font-serif;
-    font-size: 1.667em;
-    margin-top: 2.3em;
+    font-size: 1.5em;
+    margin-top: 0;
     @include media-tb {
-      font-size: 1.5em;
-      margin-top: 0;
+      font-size: 1.667em;
+      margin-top: 2.3em;
     }
   }
   &__txt {
-    @include font-min;
+    @include font-ja;
     margin-top: 1.618em;
     text-align: left;
   }

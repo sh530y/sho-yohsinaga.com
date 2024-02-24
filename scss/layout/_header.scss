@@ -10,28 +10,30 @@ style
   top: 0;
   z-index: 999;
   width: 100%;
-  padding: 23px 0;
+  padding: 2.3em 0;
   color: white;
-  transition: all $duration-fast, color 0ms;
-  &__inner {
-    @include flex-space-between;
-    height: 4.333em;
-    width: $width-cont-sp;
-    margin: 0 auto;
-    transition: all $duration-fast;
-    @include media-tb {
-      width: 94vw;
-    }
-  }
-  &__logo,
-  &__menu-btn {
-    z-index: 999;
-  }
+  transition: all $duration-fast;
   &.bg-wh,
   &.nav-open {
     padding: 0;
     color: $color-black;
-    background-color: white;
+    background-color: $color-light-gary;
     border-bottom: 1px solid $color-black-20;
+  }
+  &__inner {
+    @include flex-space-between;
+    width: $width-wraper;
+    height: 5em;
+    margin: 0 auto;
+  }
+  &__logo {
+    z-index: 999;
+    transform: translateX(-8%);
+  }
+  &__nav-btn {
+    display: none;
+    @include media-tb {
+      display: flex;
+    }
   }
 }

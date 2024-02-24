@@ -1,0 +1,52 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.nav-btn {
+  display: flex;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  transform: translateX(18%);
+  cursor: pointer;
+  &__inner {
+    position: relative;
+    width: 2.75em;
+    height: 0.65em;
+    margin: auto;
+  }
+  &__line {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transition: all $duration-fast $cb-1;
+    &:first-child {
+      top: 0;
+    }
+    &:last-child {
+      bottom: 0;
+    }
+    &.bg-wh {
+      background-color: $color-black;
+    }
+  }
+  // オープン時
+  &.nav-open {
+    .nav-btn__line {
+      background-color: $color-black;
+      &:first-child {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

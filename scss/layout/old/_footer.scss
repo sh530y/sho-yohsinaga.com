@@ -8,19 +8,20 @@ style
 .footer {
   width: 100%;
   background-color: #fff;
-  padding: 5em 0 2em;
+  padding: 5em 0;
   border-top: 1px solid $color-black-20;
-  @include media-tb {
-    padding: 5em 0;
+  @include media-sp {
+    padding: 5em 0 2em;
   }
   &__inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    width: $width-cont-sp;
+    width: $width-wrap;
     margin: 0 auto;
     @include media-tb {
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: flex-start;
     }
   }
   &__logo {
@@ -30,5 +31,8 @@ style
     @include font-sans;
     color: $color-black-50;
     font-size: 0.917em;
+    @include media-tb {
+      text-align: center;
+    }
   }
 }

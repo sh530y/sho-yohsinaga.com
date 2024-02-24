@@ -8,13 +8,14 @@ style
 ----------------------------*/
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 body {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   background-color: #f3f3f4;
-  @include media-tb {
-    font-size: 1.4rem;
+  color: $color-black;
+  @include media-sp {
+    font-size: 1.2rem;
   }
 }
 ul {

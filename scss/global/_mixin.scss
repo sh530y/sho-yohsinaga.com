@@ -44,6 +44,9 @@ mixins
   font-family: "Work Sans", sans-serif;
   font-weight: 350;
   letter-spacing: 0.04em;
+  @include media-sp {
+    font-weight: 400;
+  }
 }
 @mixin sub-text {
   opacity: 0.6;

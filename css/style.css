@@ -99,6 +99,11 @@ style
   font-weight: 350;
   letter-spacing: 0.04em;
 }
+@media screen and (max-width: 667px) {
+  .nav {
+    font-weight: 400;
+  }
+}
 @media screen and (max-width: 960px) {
   .nav--global {
     display: -webkit-box;
@@ -392,6 +397,11 @@ style
   margin-top: 1em;
   font-size: 0.857em;
 }
+@media screen and (max-width: 667px) {
+  .scroll__txt {
+    font-weight: 400;
+  }
+}
 
 /*---------------------------
 keyframes
@@ -479,6 +489,11 @@ style
   font-family: "Work Sans", sans-serif;
   font-weight: 350;
   letter-spacing: 0.04em;
+}
+@media screen and (max-width: 667px) {
+  .btn {
+    font-weight: 400;
+  }
 }
 .btn__txt-wrap, .btn__ttl-wrap {
   position: relative;

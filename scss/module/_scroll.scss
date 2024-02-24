@@ -7,11 +7,11 @@
 style
 ----------------------------*/
 .scroll {
-  @include mixin.font-sans;
+  display: inline-block;
   &__line {
     position: relative;
     width: 1px;
-    height: 92px;
+    height: 7.143em;
     margin-left: auto;
     &::before,
     &::after {
@@ -32,8 +32,9 @@ style
     }
   }
   &__txt {
+    @include mixin.font-sans;
     margin-top: 1em;
-    font-size: 0.917em;
+    font-size: 0.857em;
   }
 }
 

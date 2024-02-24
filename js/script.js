@@ -52,6 +52,28 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Rellaxオプション
+var rellax = new Rellax(".rellax", {
+  speed: -9.5,
+  center: true,
+  round: true,
+  vertical: true,
+});
+
+// 慣性スクロール
+
+const lenis = new Lenis({
+  lerp: 0.3, // Linear interpolation (lerp) intensity (between 0 and 1)
+  duration: 1, // The duration of scroll animation (in seconds). Useless if lerp defined
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 // ローダーアニメーション
 var bar = new ProgressBar.Circle(loader__circle, {
   strokeWidth: 1.5,
@@ -64,25 +86,3 @@ var bar = new ProgressBar.Circle(loader__circle, {
 bar.animate(1.0, function () {
   $("#loader, #loader__circle").delay(200).fadeOut(800);
 });
-
-// Rellaxオプション
-var rellax = new Rellax(".rellax", {
-  speed: -9.5,
-  center: true,
-  round: true,
-  vertical: true,
-});
-
-// 慣性スクロール
-
-const lenis = new Lenis({
-  lerp: 0.2, // Linear interpolation (lerp) intensity (between 0 and 1)
-  duration: 1, // The duration of scroll animation (in seconds). Useless if lerp defined
-});
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);

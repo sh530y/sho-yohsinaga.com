@@ -51,14 +51,9 @@ html {
 }
 
 body {
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 0.25vw + 1.1rem, 1.4rem);
   background-color: #f3f3f4;
   color: #1f2126;
-}
-@media screen and (max-width: 667px) {
-  body {
-    font-size: 1.2rem;
-  }
 }
 
 ul {
@@ -84,6 +79,15 @@ svg {
   fill: currentColor;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+
 /*---------------------------
 @use
 ----------------------------*/
@@ -94,12 +98,6 @@ style
   font-family: "Work Sans", sans-serif;
   font-weight: 350;
   letter-spacing: 0.04em;
-  font-size: 1.4rem;
-}
-@media screen and (max-width: 667px) {
-  .nav {
-    font-size: 1.3rem;
-  }
 }
 @media screen and (max-width: 960px) {
   .nav--global {
@@ -269,8 +267,7 @@ style
 .loader__name {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 1em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   font-size: 1.5em;
   line-height: 2.5;
@@ -292,21 +289,11 @@ style
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  line-height: 1em;
-  text-transform: uppercase;
-  font-size: 2rem;
-  gap: 0.4em;
 }
 .logo__mark {
   width: auto;
-  height: 2.4em;
+  height: clamp(4rem, 0.5vw + 3.5em, 6rem);
   fill: currentColor;
-}
-.logo__name {
-  white-space: nowrap;
 }
 
 /*---------------------------
@@ -321,8 +308,8 @@ style
   display: flex;
   height: 100%;
   aspect-ratio: 1/1;
-  -webkit-transform: translateX(18%);
-          transform: translateX(18%);
+  -webkit-transform: translateX(22%);
+          transform: translateX(22%);
   cursor: pointer;
 }
 .nav-btn__inner {
@@ -371,14 +358,12 @@ style
 style
 ----------------------------*/
 .scroll {
-  font-family: "Work Sans", sans-serif;
-  font-weight: 350;
-  letter-spacing: 0.04em;
+  display: inline-block;
 }
 .scroll__line {
   position: relative;
   width: 1px;
-  height: 92px;
+  height: 7.143em;
   margin-left: auto;
 }
 .scroll__line::before, .scroll__line::after {
@@ -401,8 +386,11 @@ style
           animation: mv_scroll 3500ms cubic-bezier(0.215, 0.61, 0.355, 1) 2000ms infinite;
 }
 .scroll__txt {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 350;
+  letter-spacing: 0.04em;
   margin-top: 1em;
-  font-size: 0.917em;
+  font-size: 0.857em;
 }
 
 /*---------------------------
@@ -614,10 +602,12 @@ style
 ----------------------------*/
 .mv {
   position: relative;
-  z-index: -1;
   height: 100svh;
+  color: white;
 }
 .mv__bg {
+  position: relative;
+  z-index: -1;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -631,9 +621,35 @@ style
   height: 100%;
   background: #000620;
   mix-blend-mode: multiply;
-  opacity: 0.25;
+  opacity: 0.3;
 }
 .mv__movie {
   min-height: 100%;
   min-width: 100%;
+}
+.mv__ttl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+}
+.mv__ttl-main {
+  font-size: clamp(3rem, 1.25vw + 2.46em, 5rem);
+}
+.mv__ttl-desc {
+  margin-top: 1em;
+  font-size: 1.07em;
+  opacity: 0.8;
+}
+.mv__scroll {
+  position: absolute;
+  bottom: 4.57em;
+  right: 7vw;
 }/*# sourceMappingURL=style.css.map */

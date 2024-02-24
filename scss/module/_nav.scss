@@ -7,10 +7,6 @@ style
 ----------------------------*/
 .nav {
   @include font-sans;
-  font-size: 1.4rem;
-  @include media-sp {
-    font-size: 1.3rem;
-  }
   &--global {
     @include media-tb {
       @include flex-center;

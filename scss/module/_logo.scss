@@ -9,15 +9,9 @@ style
   display: flex;
   justify-content: left;
   align-items: center;
-  @include font-serif;
-  font-size: 2rem;
-  gap: 0.4em;
   &__mark {
     width: auto;
-    height: 2.4em;
+    height: clamp(4rem, calc(0.5vw + 3.5em), 6rem);
     fill: currentColor;
-  }
-  &__name {
-    white-space: nowrap;
   }
 }

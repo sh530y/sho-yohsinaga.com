@@ -11,12 +11,9 @@ html {
   scroll-behavior: auto;
 }
 body {
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, calc(0.25vw + 1.1rem), 1.4rem);
   background-color: #f3f3f4;
   color: $color-black;
-  @include media-sp {
-    font-size: 1.2rem;
-  }
 }
 ul {
   list-style: none;
@@ -35,4 +32,12 @@ svg {
 svg {
   vertical-align: top;
   fill: currentColor;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
 }

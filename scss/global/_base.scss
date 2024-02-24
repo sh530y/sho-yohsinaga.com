@@ -41,3 +41,11 @@ h5,
 h6 {
   font-size: 1em;
 }
+
+.cont {
+  display: block;
+  background-color: aqua;
+  &__head {
+    height: 100px;
+  }
+}

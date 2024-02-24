@@ -27,8 +27,7 @@ style
     }
     &::after {
       transform: scaleY(0);
-      transform-origin: top;
-      animation: mv_scroll 3500ms cubic-bezier(0.215, 0.61, 0.355, 1) 2000ms infinite;
+      animation: mv_scroll 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) 2000ms infinite;
     }
   }
   &__txt {
@@ -51,10 +50,12 @@ keyframes
     transform-origin: top;
   }
   25.1% {
+    transform: scaleY(1);
     transform-origin: bottom;
   }
   25.2% {
     transform: scaleY(1);
+    transform-origin: bottom;
   }
   45%,
   100% {

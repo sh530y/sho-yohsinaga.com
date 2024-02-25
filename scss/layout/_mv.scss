@@ -7,14 +7,13 @@ style
 ----------------------------*/
 .mv {
   position: relative;
-  // z-index: -1;
   height: 100svh;
   color: white;
   &__bg {
-    position: relative;
+    position: fixed;
     z-index: -1;
     width: 100%;
-    height: 100lvh;
+    height: 100%;
     overflow: hidden;
     &::after {
       content: "";
@@ -23,9 +22,9 @@ style
       left: 0;
       width: 100%;
       height: 100%;
-      background: #000620;
+      background: #000310;
       mix-blend-mode: multiply;
-      opacity: 0.3;
+      opacity: 0.2;
     }
   }
   &__movie {
@@ -51,7 +50,11 @@ style
   }
   &__scroll {
     position: absolute;
-    bottom: 4.57em;
-    right: calc((100vw - $width-wraper) / 2);
+    bottom: 4em;
+    right: calc((100vw - $width-wrapper) / 2);
+    @include media-tb {
+      right: 50%;
+      transform: translateX(50%);
+    }
   }
 }

@@ -1,18 +1,19 @@
 /*---------------------------
 @use
 ----------------------------*/
-@use "../global/var";
-@use "../global/mixin";
+@use "../global" as *;
 /*---------------------------
 style
 ----------------------------*/
 .scroll {
-  display: inline-block;
   &__line {
     position: relative;
     width: 1px;
     height: 7.143em;
     margin-left: auto;
+    @include media-tb {
+      margin-right: auto;
+    }
     &::before,
     &::after {
       content: "";
@@ -27,11 +28,11 @@ style
     }
     &::after {
       transform: scaleY(0);
-      animation: mv_scroll 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) 2000ms infinite;
+      animation: scroll-down 3000ms cubic-bezier(0.215, 0.61, 0.355, 1) 2000ms infinite;
     }
   }
   &__txt {
-    @include mixin.font-sans;
+    @include font-sans;
     margin-top: 1em;
     font-size: 0.857em;
   }
@@ -40,7 +41,7 @@ style
 /*---------------------------
 keyframes
 ----------------------------*/
-@keyframes mv_scroll {
+@keyframes scroll-down {
   0% {
     transform: scaleY(0);
     transform-origin: top;

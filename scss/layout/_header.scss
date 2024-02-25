@@ -17,12 +17,12 @@ style
   &.nav-open {
     padding: 0;
     color: $color-black;
-    background-color: $color-light-gary;
+    background-color: #fafafa;
     border-bottom: 1px solid $color-black-20;
   }
   &__inner {
     @include flex-space-between;
-    width: $width-wraper;
+    width: $width-wrapper;
     height: 5em;
     margin: 0 auto;
   }

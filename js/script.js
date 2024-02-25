@@ -54,7 +54,7 @@ window.addEventListener("scroll", function () {
 
 // Rellaxオプション
 var rellax = new Rellax(".rellax", {
-  speed: -9.5,
+  speed: -10,
   center: true,
   round: true,
   vertical: true,

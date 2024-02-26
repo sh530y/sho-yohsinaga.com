@@ -70,10 +70,12 @@ function changeRellax() {
     rellax.refresh();
   }
 }
-$(window).resize(function () {
+window.addEventListener("resize", function () {
   changeRellax();
 });
-changeRellax();
+window.addEventListener("load", function () {
+  changeRellax();
+});
 //
 
 // 慣性スクロール

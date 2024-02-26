@@ -16,6 +16,7 @@ style
     height: 100svh;
     @include media-tb {
       position: fixed;
+      @include xy-center;
     }
     &::after {
       content: "";

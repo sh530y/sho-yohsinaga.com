@@ -63,7 +63,7 @@ var rellax = new Rellax(".rellax", {
 });
 function changeRellax() {
   var windowWidth = $(window).width();
-  var windowSm = 768;
+  var windowSm = 960;
   if (windowWidth <= windowSm) {
     rellax.destroy();
   } else {

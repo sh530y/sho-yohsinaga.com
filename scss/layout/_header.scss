@@ -17,7 +17,7 @@ style
   &.nav-open {
     padding: 0;
     color: $color-black;
-    background-color: #fafafa;
+    background-color: $color-light-gary;
     border-bottom: 1px solid $color-black-20;
   }
   &__inner {

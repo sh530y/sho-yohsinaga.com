@@ -61,21 +61,21 @@ var rellax = new Rellax(".rellax", {
   round: true,
   vertical: true,
 });
-function changeRellax() {
-  var windowWidth = $(window).width();
-  var windowSm = 960;
-  if (windowWidth <= windowSm) {
-    rellax.destroy();
-  } else {
-    rellax.refresh();
-  }
-}
-window.addEventListener("resize", function () {
-  changeRellax();
-});
-window.addEventListener("load", function () {
-  changeRellax();
-});
+// function changeRellax() {
+//   var windowWidth = $(window).width();
+//   var windowSm = 960;
+//   if (windowWidth <= windowSm) {
+//     rellax.destroy();
+//   } else {
+//     rellax.refresh();
+//   }
+// }
+// window.addEventListener("resize", function () {
+//   changeRellax();
+// });
+// window.addEventListener("load", function () {
+//   changeRellax();
+// });
 //
 
 // 慣性スクロール

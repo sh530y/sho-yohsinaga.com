@@ -1,5 +1,3 @@
-//
-
 // ナビボタン
 document.querySelector(".nav-btn").addEventListener("click", function () {
   this.classList.toggle("nav-open");
@@ -14,6 +12,7 @@ document.querySelector(".nav-btn").addEventListener("click", function () {
     });
   }, 200);
 });
+//
 
 // リンククリックでナビ閉じる
 document.querySelectorAll(".nav--global a").forEach(function (link) {
@@ -25,6 +24,7 @@ document.querySelectorAll(".nav--global a").forEach(function (link) {
       });
   });
 });
+//
 
 // 画面リサイズ時にクラス除去
 window.addEventListener("resize", function () {
@@ -37,6 +37,7 @@ window.addEventListener("resize", function () {
       });
   }
 });
+//
 
 // ヘッダーカラーチェンジ
 window.addEventListener("scroll", function () {
@@ -51,28 +52,40 @@ window.addEventListener("scroll", function () {
     });
   }
 });
+//
 
-// Rellaxオプション
+// Rellax
 var rellax = new Rellax(".rellax", {
   speed: -10,
   center: true,
   round: true,
   vertical: true,
 });
+function changeRellax() {
+  var windowWidth = $(window).width();
+  var windowSm = 768;
+  if (windowWidth <= windowSm) {
+    rellax.destroy();
+  } else {
+    rellax.refresh();
+  }
+}
+$(window).resize(function () {
+  changeRellax();
+});
+//
 
 // 慣性スクロール
-
 const lenis = new Lenis({
   lerp: 0.3, // Linear interpolation (lerp) intensity (between 0 and 1)
   duration: 1, // The duration of scroll animation (in seconds). Useless if lerp defined
 });
-
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
-
 requestAnimationFrame(raf);
+//
 
 // ローダーアニメーション
 var bar = new ProgressBar.Circle(loader__circle, {
@@ -86,3 +99,4 @@ var bar = new ProgressBar.Circle(loader__circle, {
 bar.animate(1.0, function () {
   $("#loader, #loader__circle").delay(200).fadeOut(800);
 });
+//

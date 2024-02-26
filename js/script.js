@@ -73,6 +73,7 @@ function changeRellax() {
 $(window).resize(function () {
   changeRellax();
 });
+changeRellax();
 //
 
 // 慣性スクロール

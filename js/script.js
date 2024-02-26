@@ -91,15 +91,15 @@ requestAnimationFrame(raf);
 //
 
 // ローダーアニメーション
-var bar = new ProgressBar.Circle(loader__circle, {
-  strokeWidth: 1.5,
-  easing: "easeInOut",
-  duration: 1400,
-  color: "#333435",
-  trailWidth: 0,
-  svgStyle: null,
-});
-bar.animate(1.0, function () {
-  $("#loader, #loader__circle").delay(200).fadeOut(800);
-});
+// var bar = new ProgressBar.Circle(loader__circle, {
+//   strokeWidth: 1.5,
+//   easing: "easeInOut",
+//   duration: 1400,
+//   color: "#333435",
+//   trailWidth: 0,
+//   svgStyle: null,
+// });
+// bar.animate(1.0, function () {
+//   $("#loader, #loader__circle").delay(200).fadeOut(800);
+// });
 //

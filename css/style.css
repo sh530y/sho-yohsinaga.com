@@ -646,7 +646,7 @@ style
   mix-blend-mode: multiply;
   opacity: 0.2;
 }
-.mv__movie {
+.mv__movie, .mv__img {
   position: absolute;
   top: 50%;
   left: 50%;

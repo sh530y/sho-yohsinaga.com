@@ -27,7 +27,8 @@ style
       opacity: 0.2;
     }
   }
-  &__movie {
+  &__movie,
+  &__img {
     position: absolute;
     @include xy-center;
     min-height: 100svh;

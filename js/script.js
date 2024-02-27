@@ -54,6 +54,24 @@ window.addEventListener("scroll", function () {
 });
 //
 
+document.addEventListener("DOMContentLoaded", function () {
+  let is_playing = false;
+  const video = document.querySelector(".mv__movie");
+  const img = document.querySelector(".mv__img");
+  video
+    .play()
+    .then(() => {
+      // 省電力モードではないときの処理
+      video.style.display = "block";
+      img.style.display = "none";
+    })
+    .catch((error) => {
+      // 省電力モードのときの処理
+      video.style.display = "none";
+      img.style.display = "block";
+    });
+});
+
 // Rellax
 var rellax = new Rellax(".rellax", {
   speed: -10,

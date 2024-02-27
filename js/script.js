@@ -26,7 +26,7 @@ document.querySelectorAll(".nav--global a").forEach(function (link) {
 });
 //
 
-// 画面リサイズ時にクラス除去
+// 画面リサイズ時にopenクラス除去
 window.addEventListener("resize", function () {
   let windowWidth = window.innerWidth;
   if (windowWidth > 960) {
@@ -54,6 +54,7 @@ window.addEventListener("scroll", function () {
 });
 //
 
+// 低電力モードで画像に切り替え
 document.addEventListener("DOMContentLoaded", function () {
   let is_playing = false;
   const video = document.querySelector(".mv__movie");
@@ -72,28 +73,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Rellax
+// Rellaxオプション
 var rellax = new Rellax(".rellax", {
   speed: -10,
   center: true,
   round: true,
   vertical: true,
 });
-// function changeRellax() {
-//   var windowWidth = $(window).width();
-//   var windowSm = 960;
-//   if (windowWidth <= windowSm) {
-//     rellax.destroy();
-//   } else {
-//     rellax.refresh();
-//   }
-// }
-// window.addEventListener("resize", function () {
-//   changeRellax();
-// });
-// window.addEventListener("load", function () {
-//   changeRellax();
-// });
+
+// Rellax オンオフ
+function rellaxChange() {
+  const windowWidth = window.innerWidth;
+  const mvBg = document.querySelector(".mv__bg");
+  const className = "rellax";
+  if (windowWidth > 960) {
+    mvBg.classList.add(className);
+    rellax.refresh();
+  } else {
+    mvBg.classList.remove(className);
+    rellax.destroy();
+  }
+}
+window.addEventListener("load", rellaxChange);
+window.addEventListener("resize", rellaxChange);
 //
 
 // 慣性スクロール

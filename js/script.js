@@ -73,14 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Rellaxオプション
-var rellax = new Rellax(".rellax", {
-  speed: -10,
-  center: true,
-  round: true,
-  vertical: true,
-});
-
 // Rellax オンオフ
 // function rellaxChange() {
 //   const windowWidth = window.innerWidth;
@@ -88,19 +80,17 @@ var rellax = new Rellax(".rellax", {
 //   const className = "rellax";
 //   if (windowWidth > 960) {
 //     mvBg.classList.add(className);
-//     rellax.refresh();
 //   } else {
 //     mvBg.classList.remove(className);
-//     rellax.destroy();
 //   }
 // }
 // window.addEventListener("load", rellaxChange);
 // window.addEventListener("resize", rellaxChange);
-// //
+//
 
 // 慣性スクロール
 const lenis = new Lenis({
-  lerp: 0.3, // Linear interpolation (lerp) intensity (between 0 and 1)
+  lerp: 0.5, // Linear interpolation (lerp) intensity (between 0 and 1)
   duration: 1, // The duration of scroll animation (in seconds). Useless if lerp defined
 });
 function raf(time) {
@@ -123,3 +113,8 @@ requestAnimationFrame(raf);
 //   $("#loader, #loader__circle").delay(200).fadeOut(800);
 // });
 //
+
+// Rellaxオプション
+var rellax = new Rellax(".rellax", {
+  breakpoints: [667, 768, 960],
+});

@@ -1,0 +1,44 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5em;
+  max-width: 900px;
+  margin: 0 auto;
+  @include media-tb {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__img-wrap {
+    text-align: center;
+    width: 15em;
+    box-shadow: $shadow;
+  }
+  &__txt-wrap {
+    width: 50%;
+    flex-grow: 1;
+    @include media-tb {
+      width: 100%;
+      max-width: 46em;
+    }
+  }
+  &__name {
+    @include font-serif;
+    font-size: clamp(1.8rem, calc(0.5vw + 1.6rem), 2.2rem);
+    margin-bottom: 1.5em;
+    @include media-tb {
+      text-align: center;
+    }
+  }
+  &__txt {
+    @include font-min;
+  }
+}

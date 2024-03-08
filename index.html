@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@400;500&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@400;500&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Old+Mincho:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <!-- style sheet -->
@@ -136,11 +136,11 @@
     <main class="main">
       <!-- main visual -->
       <section class="mv">
-        <div class="mv__bg rellax" data-rellax-mobile-speed="0" data-rellax-desktop-speed="-8">
+        <div class="mv__bg">
           <video
             class="mv__movie"
             src="./video/mv_movie.mp4"
-            poster="./img/mv_img.jpg"
+            poster="./img/mv_bg.jpg"
             autoplay
             muted
             loop
@@ -149,7 +149,6 @@
           >
             <p>動画を再生できる環境ではありません。</p>
           </video>
-          <img class="mv__img" src="./img/mv_img.jpg" />
         </div>
         <h1 class="mv__ttl">
           <p class="mv__ttl-main">SHO YOSHINAGA</p>
@@ -162,210 +161,186 @@
       </section>
       <!-- /main visual -->
       <!-- about -->
-      <secition class="cont cont--bg-gray" id="about">
-        <div class="cont__inner">
-          <h2 class="cont__head">
-            <p class="cont__head-en">About</p>
-            <p class="cont__head-ja">私について</p>
+      <secition class="sec" id="about">
+        <div class="sec__inner">
+          <h2 class="sec__head">
+            <p class="sec__head-ttl">About</p>
           </h2>
-          <div class="about">
-            <figure class="about__img-wrap">
-              <img class="about__img" src="./img/about_img.JPG" />
-            </figure>
-            <div class="about__body">
-              <h3 class="about__name">SHO YOSHINAGA</h3>
-              <p class="about__txt">
-                1994年生まれ、静岡県出身のWEBデザイナー。
-                「学び続けること」を人生のモットーとしており、
-                変わり続けるデザイントレンドの把握や、新しいスキルを
-                身につけることに日々精進しています。
-                <br />
-                制作に取り組む上ではデザインの目的や意図を理解し、
-                使う人が迷わない、且つクライアントの課題を解決できるような
-                デザインを心がけています。
-                <br />
-                ビジュアルとコンバージョンの両立ができるデザイナーに憧れており、
-                自らもそんなデザイナーになりたいと思っています。
-              </p>
+          <div class="sec__body">
+            <div class="about">
+              <figure class="about__img-wrap">
+                <img class="about__img" src="./img/about_img.JPG" />
+              </figure>
+              <div class="about__txt-wrap">
+                <h3 class="about__name">SHO YOSHINAGA</h3>
+                <p class="about__txt">
+                  1994年生まれ、静岡県出身のWEBデザイナー。<br />
+                  「学び続けること」を人生のモットーとしており、時代に合わせて変わり続けるデザイントレンドの把握や、新しいスキルを身につけることに日々精進しています。<br />
+                  ビジュアルとコンバージョンの両立ができるデザイナーに憧れており、自らもそんなデザイナーになりたいです。
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </secition>
       <!-- /about -->
       <!-- works -->
-      <secition class="cont cont--bg-dot" id="works">
-        <div class="cont__inner">
-          <h2 class="cont__head">
-            <p class="cont__head-en">Works</p>
-            <p class="cont__head-ja">制作実績</p>
+      <secition class="sec sec--bg-wh" id="works">
+        <div class="sec__inner">
+          <h2 class="sec__head">
+            <p class="sec__head-ttl">Works</p>
           </h2>
-          <ul class="works-list">
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/portfolio/index.html">
-                <figure class="works-list__thumb">
-                  <img
-                    class="works-list__thumb-img"
-                    src="./img/portfolio_thmb.jpg"
-                    alt="portfolio"
-                  />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="SHO YOSHINAGA">
-                    <span>SHO YOSHINAGA</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Web site</p>
-              </a>
-            </li>
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/fitbox/index.html">
-                <figure class="works-list__thumb">
-                  <img class="works-list__thumb-img" src="./img/fitbox_thmb.jpg" alt="fitbox" />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="FITBOX LP">
-                    <span>FITBOX LP</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Web site</p>
-              </a>
-            </li>
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/hitotoki/index.html">
-                <figure class="works-list__thumb">
-                  <img
-                    class="works-list__thumb-img"
-                    src="./img/hitotoki_thmb.jpg"
-                    alt="portfolio"
-                  />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="HITOTOKI HP">
-                    <span>HITOTOKI HP</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Web site</p>
-              </a>
-            </li>
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/bnr-skin/index.html">
-                <figure class="works-list__thumb">
-                  <img
-                    class="works-list__thumb-img"
-                    src="./img/bnr_skin_thmb.jpg"
-                    alt="portfolio"
-                  />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="SKIN CLINIC バナー">
-                    <span>SKIN CLINIC バナー</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Banner</p>
-              </a>
-            </li>
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/bnr-chintai/index.html">
-                <figure class="works-list__thumb">
-                  <img
-                    class="works-list__thumb-img"
-                    src="./img/bnr_chintai_thmb.jpg"
-                    alt="fitbox"
-                  />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="CHINTAI.COM バナー">
-                    <span>CHINTAI.com バナー</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Banner</p>
-              </a>
-            </li>
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/bnr-cs/index.html">
-                <figure class="works-list__thumb">
-                  <img class="works-list__thumb-img" src="./img/bnr_cs_thmb.jpg" alt="portfolio" />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="CATERING STYLE バナー">
-                    <span>CATERING STYLE バナー</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Banner</p>
-              </a>
-            </li>
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/mirror/index.html">
-                <figure class="works-list__thumb">
-                  <img
-                    class="works-list__thumb-img"
-                    src="./img/mirror_thmb.jpg"
-                    alt="MIRROR フライヤー"
-                  />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="MIRROR フライヤー">
-                    <span>MIRROR フライヤー</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Graphic</p>
-              </a>
-            </li>
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/lunch/index.html">
-                <figure class="works-list__thumb">
-                  <img class="works-list__thumb-img" src="./img/lunch_thmb.jpg" alt="LUNCH MENU" />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="LUNCH MENU">
-                    <span>LUNCH MENU</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Graphic</p>
-              </a>
-            </li>
-            <li class="works-list__item">
-              <a class="works-list__link" href="./works/meishi/index.html">
-                <figure class="works-list__thumb">
-                  <img class="works-list__thumb-img" src="./img/meishi_thmb.jpg" alt="portfolio" />
-                </figure>
-                <h3 class="works-list__ttl-wrap">
-                  <p class="works-list__ttl" data-text="SHO YOSHINAGA 名刺">
-                    <span>SHO YOSHINAGA 名刺</span>
-                  </p>
-                </h3>
-                <p class="works-list__desc">Graphic</p>
-              </a>
-            </li>
-          </ul>
+          <div class="sec__body">
+            <ul class="works">
+              <li class="works__item">
+                <a class="works__link" href="./works/portfolio/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/portfolio_thmb.jpg" alt="portfolio" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="SHO YOSHINAGA">
+                      <span>SHO YOSHINAGA</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Web site</p>
+                </a>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./works/fitbox/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/fitbox_thmb.jpg" alt="fitbox" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="FITBOX LP">
+                      <span>FITBOX LP</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Web site</p>
+                </a>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./works/hitotoki/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/hitotoki_thmb.jpg" alt="portfolio" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="HITOTOKI HP">
+                      <span>HITOTOKI HP</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Web site</p>
+                </a>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./works/bnr-skin/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/bnr_skin_thmb.jpg" alt="portfolio" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="SKIN CLINIC バナー">
+                      <span>SKIN CLINIC バナー</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Banner</p>
+                </a>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./works/bnr-chintai/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/bnr_chintai_thmb.jpg" alt="fitbox" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="CHINTAI.COM バナー">
+                      <span>CHINTAI.com バナー</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Banner</p>
+                </a>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./works/bnr-cs/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/bnr_cs_thmb.jpg" alt="portfolio" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="CATERING STYLE バナー">
+                      <span>CATERING STYLE バナー</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Banner</p>
+                </a>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./works/mirror/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/mirror_thmb.jpg" alt="MIRROR フライヤー" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="MIRROR フライヤー">
+                      <span>MIRROR フライヤー</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Graphic</p>
+                </a>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./works/lunch/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/lunch_thmb.jpg" alt="LUNCH MENU" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="LUNCH MENU">
+                      <span>LUNCH MENU</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Graphic</p>
+                </a>
+              </li>
+              <li class="works__item">
+                <a class="works__link" href="./works/meishi/index.html">
+                  <figure class="works__img-wrap">
+                    <img class="works__img" src="./img/meishi_thmb.jpg" alt="portfolio" />
+                  </figure>
+                  <h3 class="works__ttl-wrap">
+                    <p class="works__ttl" data-text="SHO YOSHINAGA 名刺">
+                      <span>SHO YOSHINAGA 名刺</span>
+                    </p>
+                  </h3>
+                  <p class="works__cat">Graphic</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </secition>
       <!-- /works -->
     </main>
     <!-- contact -->
-    <aside class="cont cont--bg-dark" id="contact">
-      <div class="cont__inner">
-        <h2 class="cont__head cont__head--center">
-          <p class="cont__head-en">Contact</p>
-          <p class="cont__head-ja cont__head-ja--center">お問い合わせ</p>
+    <aside class="sec" id="contact">
+      <div class="sec__inner">
+        <h2 class="sec__head">
+          <p class="sec__head-en">Contact</p>
+          <p class="sec__head-ja">お問い合わせ</p>
         </h2>
-        <div class="contact">
-          <p class="contact__txt">
-            この度は当サイトへご訪問いただきありがとうございます。<br />
-            お仕事のご依頼やご相談などございましたらお気軽にお問合せください。
-          </p>
-          <a class="contact__btn btn btn--round btn--wh" href="mailto:sysng.info@gmail.com">
-            <div class="btn__txt-wrap">
-              <p class="btn__txt" data-text="Contact me">
-                <span>Contact me</span>
-              </p>
-            </div>
-            <span class="btn__arrow">
-              <svg viewBox="0 0 100 84">
-                <polygon points="100,42.1 0,84 38.2,42.1 0,0 " />
-              </svg>
-            </span>
-          </a>
+        <div class="sec__body">
+          <div class="contact">
+            <p class="contact__txt">
+              この度は当サイトへご訪問いただきありがとうございます。<br />
+              お仕事のご依頼やご相談などございましたらお気軽にお問合せください。
+            </p>
+            <a class="contact__btn btn btn--round btn--wh" href="mailto:sysng.info@gmail.com">
+              <div class="btn__txt-wrap">
+                <p class="btn__txt" data-text="Contact me">
+                  <span>Contact me</span>
+                </p>
+              </div>
+              <span class="btn__arrow">
+                <svg viewBox="0 0 100 84">
+                  <polygon points="100,42.1 0,84 38.2,42.1 0,0 " />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </aside>
@@ -443,16 +418,14 @@
     </footer>
     <!-- /footer -->
     <!-- script -->
-    <!-- font awesome -->
+
     <script src="https://kit.fontawesome.com/484d166e72.js" crossorigin="anonymous"></script>
-    <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script src="./js/lenis.min.js"></script>
     <script src="./js/script.js"></script>
     <!-- /script -->

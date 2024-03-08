@@ -1,0 +1,37 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 5em;
+  max-width: $width-cont-m;
+  margin: 0 auto;
+  @include media-tb {
+    flex-direction: column;
+    align-items: center;
+    max-width: 46em;
+  }
+  &__txt-wrap {
+    width: 70%;
+    flex-grow: 1;
+    @include media-tb {
+      width: auto;
+    }
+  }
+  &__txt {
+    @include font-min;
+  }
+  &__btn-wrap {
+    width: 50%;
+    flex-grow: 1;
+    @include media-tb {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}

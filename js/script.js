@@ -53,52 +53,40 @@ window.addEventListener("scroll", function () {
   }
 });
 //
-
-// 低電力モードで画像に切り替え
-document.addEventListener("DOMContentLoaded", function () {
-  let is_playing = false;
-  const video = document.querySelector(".mv__movie");
-  const img = document.querySelector(".mv__img");
-  video
-    .play()
-    .then(() => {
-      // 省電力モードではないときの処理
-      video.style.display = "block";
-      img.style.display = "none";
-    })
-    .catch((error) => {
-      // 省電力モードのときの処理
-      video.style.display = "none";
-      img.style.display = "block";
-    });
-});
-
-// Rellax オンオフ
-// function rellaxChange() {
-//   const windowWidth = window.innerWidth;
-//   const mvBg = document.querySelector(".mv__bg");
-//   const className = "rellax";
-//   if (windowWidth > 960) {
-//     mvBg.classList.add(className);
-//   } else {
-//     mvBg.classList.remove(className);
-//   }
-// }
-// window.addEventListener("load", rellaxChange);
-// window.addEventListener("resize", rellaxChange);
-//
-
-// 慣性スクロール
 const lenis = new Lenis({
-  lerp: 0.5, // Linear interpolation (lerp) intensity (between 0 and 1)
-  duration: 1, // The duration of scroll animation (in seconds). Useless if lerp defined
+  lerp: 0.3, // 慣性の強さ
+  duration: 1, // スクロールアニメーションの時間
 });
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
+
 requestAnimationFrame(raf);
-//
+
+// // 低電力モードで画像に切り替え
+// document.addEventListener("DOMContentLoaded", function () {
+//   const video = document.querySelector(".mv__movie");
+//   const img = document.querySelector(".mv__img");
+//   video
+//     .play()
+//     .then(() => {
+//       // 省電力モードではないときの処理
+//       video.style.display = "block";
+//       img.style.display = "none";
+//     })
+//     .catch((error) => {
+//       // 省電力モードのときの処理
+//       video.style.display = "none";
+//       img.style.display = "block";
+//     });
+// });
+// //
 
 // ローダーアニメーション
 // var bar = new ProgressBar.Circle(loader__circle, {
@@ -113,8 +101,3 @@ requestAnimationFrame(raf);
 //   $("#loader, #loader__circle").delay(200).fadeOut(800);
 // });
 //
-
-// Rellaxオプション
-var rellax = new Rellax(".rellax", {
-  breakpoints: [667, 768, 960],
-});

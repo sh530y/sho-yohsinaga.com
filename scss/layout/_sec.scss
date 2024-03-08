@@ -1,0 +1,27 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.sec {
+  display: block;
+  background-color: $color-light-gary;
+  &--bg-wh {
+    background-color: white;
+  }
+  &__inner {
+    width: $width-wrapper;
+    padding-top: clamp(80px, calc(5vw + 60px), 120px); //80px~120px
+    padding-bottom: clamp(100px, calc(5vw + 80px), 140px); //100px~140px
+    margin: 0 auto;
+  }
+  &__head {
+    @include font-serif;
+    font-size: clamp(2rem, calc(1.25vw + 1.5rem), 3rem); //20px~30px
+    line-height: 1;
+    padding-bottom: clamp(60px, calc(5vw + 40px), 100px); //60px~100px
+    text-align: center;
+  }
+}

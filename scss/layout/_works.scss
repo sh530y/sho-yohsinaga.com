@@ -1,0 +1,42 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+/*---------------------------
+style
+----------------------------*/
+.works {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5vw;
+  @include media-sp {
+    flex-direction: column;
+  }
+  &__item {
+    width: 25%;
+    flex-grow: 1;
+    @include media-tb {
+      width: 45%;
+    }
+    @include media-sp {
+      width: 100%;
+    }
+  }
+  &__img-wrap {
+    box-shadow: $shadow;
+    aspect-ratio: 3 / 2;
+  }
+  &__img {
+    height: 100.1%;
+  }
+  &__ttl {
+    font-size: clamp(1.6rem, calc(0.25vw + 1.5rem), 1.8rem);
+    margin-top: 1.5em;
+  }
+  &__cat {
+    @include font-sans;
+    font-size: clamp(1.1rem, calc(0.25vw + 1rem), 1.3rem);
+    margin-top: 0.5em;
+  }
+}

@@ -66,6 +66,7 @@ a {
 }
 
 img,
+video,
 svg {
   width: 100%;
   height: 100%;
@@ -86,6 +87,7 @@ h4,
 h5,
 h6 {
   font-size: 1em;
+  font-weight: normal;
 }
 
 /*---------------------------
@@ -584,8 +586,8 @@ style
 .header.bg-wh, .header.nav-open {
   padding: 0;
   color: #1f2126;
-  background-color: #f3f3f4;
-  border-bottom: 1px solid rgba(31, 33, 38, 0.2);
+  background-color: white;
+  border-bottom: 1px solid rgba(31, 33, 38, 0.1);
 }
 .header__inner {
   display: -webkit-box;
@@ -630,13 +632,19 @@ style
   overflow: hidden;
 }
 .mv__bg {
+  position: fixed;
   z-index: -1;
   width: 100%;
   height: 100svh;
 }
+@media screen and (max-width: 960px) {
+  .mv__bg {
+    position: fixed;
+  }
+}
 .mv__bg::after {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -686,4 +694,240 @@ style
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
   }
+}
+
+/*---------------------------
+@use
+----------------------------*/
+/*---------------------------
+style
+----------------------------*/
+.sec {
+  display: block;
+  background-color: #f3f3f4;
+}
+.sec--bg-wh {
+  background-color: white;
+}
+.sec__inner {
+  width: 86vw;
+  padding-top: clamp(80px, 5vw + 60px, 120px);
+  padding-bottom: clamp(100px, 5vw + 80px, 140px);
+  margin: 0 auto;
+}
+.sec__head {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 1.25vw + 1.5rem, 3rem);
+  line-height: 1;
+  padding-bottom: clamp(60px, 5vw + 40px, 100px);
+  text-align: center;
+}
+
+/*---------------------------
+@use
+----------------------------*/
+/*---------------------------
+style
+----------------------------*/
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 960px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.about__img-wrap {
+  text-align: center;
+  width: 15em;
+  -webkit-box-shadow: 1em 2em 6em rgba(0, 0, 0, 0.3);
+          box-shadow: 1em 2em 6em rgba(0, 0, 0, 0.3);
+}
+.about__txt-wrap {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media screen and (max-width: 960px) {
+  .about__txt-wrap {
+    width: 100%;
+    max-width: 46em;
+  }
+}
+.about__name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 0.5vw + 1.6rem, 2.2rem);
+  margin-bottom: 1.5em;
+}
+@media screen and (max-width: 960px) {
+  .about__name {
+    text-align: center;
+  }
+}
+.about__txt {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 2.25em;
+}
+
+/*---------------------------
+@use
+----------------------------*/
+/*---------------------------
+style
+----------------------------*/
+.works {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5vw;
+}
+@media screen and (max-width: 667px) {
+  .works {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.works__item {
+  width: 25%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media screen and (max-width: 960px) {
+  .works__item {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 667px) {
+  .works__item {
+    width: 100%;
+  }
+}
+.works__img-wrap {
+  -webkit-box-shadow: 1em 2em 6em rgba(0, 0, 0, 0.3);
+          box-shadow: 1em 2em 6em rgba(0, 0, 0, 0.3);
+  aspect-ratio: 3/2;
+}
+.works__img {
+  height: 100.1%;
+}
+.works__ttl {
+  font-size: clamp(1.6rem, 0.25vw + 1.5rem, 1.8rem);
+  margin-top: 1.5em;
+}
+.works__cat {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 350;
+  letter-spacing: 0.04em;
+  font-size: clamp(1.1rem, 0.25vw + 1rem, 1.3rem);
+  margin-top: 0.5em;
+}
+@media screen and (max-width: 667px) {
+  .works__cat {
+    font-weight: 400;
+  }
+}
+
+/*---------------------------
+@use
+----------------------------*/
+/*---------------------------
+style
+----------------------------*/
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 960px) {
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 46em;
+  }
+}
+.contact__txt-wrap {
+  width: 70%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media screen and (max-width: 960px) {
+  .contact__txt-wrap {
+    width: auto;
+  }
+}
+.contact__txt {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 2.25em;
+}
+.contact__btn-wrap {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media screen and (max-width: 960px) {
+  .contact__btn-wrap {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/*---------------------------
+@use
+----------------------------*/
+/*---------------------------
+style
+----------------------------*/
+.footer {
+  background-color: White;
 }/*# sourceMappingURL=style.css.map */

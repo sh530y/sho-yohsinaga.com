@@ -725,6 +725,15 @@ style
   padding-bottom: clamp(60px, 5vw + 40px, 100px);
   text-align: center;
 }
+.sec__ttl-ja {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 2.25em;
+  font-size: clamp(1rem, 0.25vw + 0.9rem, 1.2rem);
+  margin-top: 0.5em;
+  opacity: 0.6;
+}
 
 /*---------------------------
 @use

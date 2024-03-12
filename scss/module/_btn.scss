@@ -9,26 +9,16 @@ style
   @include flex-space-between;
   @include font-sans;
   @include animated-link;
+  width: 100%;
+  height: 3.5em;
+  border-bottom: 1px solid currentColor;
   &--round {
-    width: 250px;
-    height: 54px;
-    padding: 0 2.167em;
-    border: 1px solid $color-black-20;
-    border-radius: 9999px;
-    @include media-sp {
-      width: 64vw;
-    }
+    width: 80%;
+    height: 3.8em;
+    padding: 0 2em;
+    border: 1px solid currentColor;
+    border-radius: 999px;
   }
-  &--bar {
-    width: 46vw;
-    height: 46px; //1.3rem = 40px
-    padding-right: 0.38em;
-    border-bottom: 1px solid $color-black-20;
-  }
-  &--wh {
-    border: 1px solid $color-white-30;
-  }
-
   &__arrow {
     height: 0.69em;
     width: 0.69em;

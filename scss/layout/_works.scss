@@ -24,11 +24,15 @@ style
     }
   }
   &__img-wrap {
-    box-shadow: $shadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     aspect-ratio: 3 / 2;
+    overflow: hidden;
+    box-shadow: $shadow;
   }
   &__img {
-    height: 100.1%;
+    height: 101%;
   }
   &__ttl {
     font-size: clamp(1.6rem, calc(0.25vw + 1.5rem), 1.8rem);

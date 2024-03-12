@@ -34,7 +34,21 @@ style
         opacity $duration-slow $dellay-fast, color $duration-fast;
     }
   }
-
+  &--footer {
+    .nav__sns {
+      @include media-pc {
+        position: absolute;
+        @include x-center;
+      }
+    }
+    .nav__inner,
+    .nav__menu,
+    .nav__sns {
+      @include media-tb {
+        align-items: flex-start;
+      }
+    }
+  }
   &__inner {
     display: flex;
     align-items: center;

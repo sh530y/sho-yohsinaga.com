@@ -862,7 +862,7 @@ style
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 14vw;
+    gap: 16vw;
   }
 }
 .works__item {

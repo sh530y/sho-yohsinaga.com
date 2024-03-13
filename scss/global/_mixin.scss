@@ -42,7 +42,7 @@ mixins
 }
 @mixin font-sans {
   font-family: "Work Sans", sans-serif;
-  font-weight: 350;
+  font-weight: 400;
   letter-spacing: 0.04em;
   @include media-sp {
     font-weight: 400;

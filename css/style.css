@@ -98,7 +98,7 @@ style
 ----------------------------*/
 .nav {
   font-family: "Work Sans", sans-serif;
-  font-weight: 350;
+  font-weight: 400;
   letter-spacing: 0.04em;
 }
 @media screen and (max-width: 667px) {
@@ -411,7 +411,7 @@ style
 }
 .scroll__txt {
   font-family: "Work Sans", sans-serif;
-  font-weight: 350;
+  font-weight: 400;
   letter-spacing: 0.04em;
   margin-top: 1em;
   font-size: 0.857em;
@@ -514,7 +514,7 @@ style
       -ms-flex-align: center;
           align-items: center;
   font-family: "Work Sans", sans-serif;
-  font-weight: 350;
+  font-weight: 400;
   letter-spacing: 0.04em;
   width: 100%;
   height: 3.5em;
@@ -726,7 +726,7 @@ style
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-size: clamp(2rem, 1.25vw + 1.9rem, 3.4rem);
+  font-size: clamp(2rem, 1.25vw + 1.9rem, 3.2rem);
   line-height: 1;
   padding-bottom: clamp(60px, 5vw + 40px, 100px);
   text-align: center;
@@ -829,12 +829,18 @@ style
       flex-wrap: wrap;
   gap: 5vw;
 }
+@media screen and (max-width: 960px) {
+  .works {
+    gap: 8vw;
+  }
+}
 @media screen and (max-width: 667px) {
   .works {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 12vw;
   }
 }
 .works__item {
@@ -864,6 +870,7 @@ style
       -ms-flex-pack: center;
           justify-content: center;
   aspect-ratio: 3/2;
+  margin-bottom: 2em;
   overflow: hidden;
   -webkit-box-shadow: 1em 2em 6em rgba(0, 0, 0, 0.3);
           box-shadow: 1em 2em 6em rgba(0, 0, 0, 0.3);
@@ -871,21 +878,21 @@ style
 .works__img {
   height: 101%;
 }
-.works__ttl {
-  font-size: clamp(1.6rem, 0.25vw + 1.5rem, 1.8rem);
-  margin-top: 1.5em;
-}
 .works__cat {
   font-family: "Work Sans", sans-serif;
-  font-weight: 350;
+  font-weight: 400;
   letter-spacing: 0.04em;
   font-size: clamp(1.1rem, 0.25vw + 1rem, 1.3rem);
-  margin-top: 0.5em;
+  color: rgba(31, 33, 38, 0.6);
 }
 @media screen and (max-width: 667px) {
   .works__cat {
     font-weight: 400;
   }
+}
+.works__ttl {
+  font-size: clamp(1.6rem, 0.25vw + 1.5rem, 1.8rem);
+  margin-top: 0.5em;
 }
 
 /*---------------------------
@@ -986,7 +993,7 @@ style
 }
 .footer__copy {
   font-family: "Work Sans", sans-serif;
-  font-weight: 350;
+  font-weight: 400;
   letter-spacing: 0.04em;
 }
 @media screen and (max-width: 667px) {

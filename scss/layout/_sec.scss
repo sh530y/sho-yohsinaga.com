@@ -19,9 +19,9 @@ style
   }
   &__head {
     @include font-serif;
-    font-size: clamp(2rem, calc(1.25vw + 1.9rem), 3.4rem); //20px~30px
+    font-size: clamp(2rem, calc(1.25vw + 1.9rem), 3.2rem);
     line-height: 1;
-    padding-bottom: clamp(60px, calc(5vw + 40px), 100px); //60px~100px
+    padding-bottom: clamp(60px, calc(5vw + 40px), 100px);
     text-align: center;
   }
   &__ttl-ja {

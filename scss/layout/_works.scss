@@ -10,8 +10,12 @@ style
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 5vw;
+  @include media-tb {
+    gap: 8vw;
+  }
   @include media-sp {
     flex-direction: column;
+    gap: 12vw;
   }
   &__item {
     width: 25%;
@@ -28,19 +32,20 @@ style
     align-items: center;
     justify-content: center;
     aspect-ratio: 3 / 2;
+    margin-bottom: 2em;
     overflow: hidden;
     box-shadow: $shadow;
   }
   &__img {
     height: 101%;
   }
-  &__ttl {
-    font-size: clamp(1.6rem, calc(0.25vw + 1.5rem), 1.8rem);
-    margin-top: 1.5em;
-  }
   &__cat {
     @include font-sans;
     font-size: clamp(1.1rem, calc(0.25vw + 1rem), 1.3rem);
+    color: $color-black-60;
+  }
+  &__ttl {
+    font-size: clamp(1.6rem, calc(0.25vw + 1.5rem), 1.8rem);
     margin-top: 0.5em;
   }
 }

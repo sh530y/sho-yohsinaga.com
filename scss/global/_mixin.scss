@@ -21,6 +21,13 @@ mixins
     @content;
   }
 }
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
 // fonts
 @mixin font-ja {
   font-family: "Noto Sans JP", sans-serif;

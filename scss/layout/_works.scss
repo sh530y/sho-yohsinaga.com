@@ -30,7 +30,7 @@ style
   }
   &__link {
     display: inline-block;
-    &:hover {
+    @include hover {
       .works__img-wrap {
         box-shadow: none;
       }

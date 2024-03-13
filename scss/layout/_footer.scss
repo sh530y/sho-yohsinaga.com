@@ -18,9 +18,13 @@ style
     @include media-tb {
       flex-direction: column;
       align-items: start;
+      gap: 4em;
     }
   }
   &__copy {
     @include font-sans;
+    @include media-tb {
+      margin: 0 auto;
+    }
   }
 }

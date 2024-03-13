@@ -19,6 +19,16 @@ style
       visibility: hidden;
       opacity: 0;
     }
+    .nav__inner {
+      @include media-tb {
+        transform: translate(1em);
+        opacity: 0;
+        &.transition {
+          //閉じる時の挙動
+          transition: transform $duration-slow $cb-2, opacity $duration-slow, color $duration-fast;
+        }
+      }
+    }
     &.nav-open {
       @include media-tb {
         visibility: visible;
@@ -26,6 +36,15 @@ style
         //開く時の挙動
         transition: transform $duration-slow $cb-2, visibility $duration-slow,
           opacity $duration-slow, color $duration-fast;
+      }
+      .nav__inner {
+        @include media-tb {
+          opacity: 1;
+          transform: translate(0);
+          //開く時の挙動
+          transition: transform $duration-slow $dellay-fast $cb-2,
+            opacity $duration-slow $dellay-fast, color $duration-fast;
+        }
       }
     }
     &.transition {
@@ -55,25 +74,6 @@ style
     gap: 3em;
     @include media-tb {
       flex-direction: column;
-    }
-    &--global {
-      @include media-tb {
-        transform: translate(1em);
-        opacity: 0;
-        &.transition {
-          //閉じる時の挙動
-          transition: transform $duration-slow $cb-2, opacity $duration-slow, color $duration-fast;
-        }
-      }
-      &.nav-open {
-        @include media-tb {
-          opacity: 1;
-          transform: translate(0);
-          //開く時の挙動
-          transition: transform $duration-slow $dellay-fast $cb-2,
-            opacity $duration-slow $dellay-fast, color $duration-fast;
-        }
-      }
     }
   }
   &__menu,

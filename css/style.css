@@ -90,6 +90,12 @@ h6 {
   font-weight: normal;
 }
 
+@media screen and (max-width: 667px) {
+  .br-pc {
+    display: none;
+  }
+}
+
 /*---------------------------
 @use
 ----------------------------*/
@@ -544,8 +550,7 @@ style
   opacity: 0;
 }
 .btn--round {
-  width: 80%;
-  height: 3.8em;
+  height: 4em;
   padding: 0 2em;
   border: 1px solid currentColor;
   border-radius: 999px;
@@ -554,23 +559,25 @@ style
   height: 0.69em;
   width: 0.69em;
 }
-.btn:hover .btn {
-  -webkit-transition: all 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-.btn:hover .btn__txt {
-  -webkit-transform: translateY(-120%);
-          transform: translateY(-120%);
-}
-.btn:hover .btn__txt * {
-  opacity: 0;
-}
-.btn:hover .btn__txt::after {
-  opacity: 1;
-}
-.btn:hover .btn__arrow {
-  -webkit-animation: btn__arrow 650ms cubic-bezier(0.215, 0.61, 0.355, 1);
-          animation: btn__arrow 650ms cubic-bezier(0.215, 0.61, 0.355, 1);
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover .btn {
+    -webkit-transition: all 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .btn:hover .btn__txt {
+    -webkit-transform: translateY(-120%);
+            transform: translateY(-120%);
+  }
+  .btn:hover .btn__txt * {
+    opacity: 0;
+  }
+  .btn:hover .btn__txt::after {
+    opacity: 1;
+  }
+  .btn:hover .btn__arrow {
+    -webkit-animation: btn__arrow 650ms cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation: btn__arrow 650ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 }
 
 /*---------------------------

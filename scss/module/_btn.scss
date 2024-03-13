@@ -13,8 +13,7 @@ style
   height: 3.5em;
   border-bottom: 1px solid currentColor;
   &--round {
-    width: 80%;
-    height: 3.8em;
+    height: 4em;
     padding: 0 2em;
     border: 1px solid currentColor;
     border-radius: 999px;
@@ -24,7 +23,7 @@ style
     width: 0.69em;
   }
   //hover
-  &:hover {
+  @include hover {
     .btn {
       transition: all $duration-slow $cb-2;
       &__txt {

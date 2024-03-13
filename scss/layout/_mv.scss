@@ -40,17 +40,18 @@ style
   &__ttl {
     position: absolute;
     @include xy-center;
-    @include font-serif;
     text-align: center;
     line-height: 1.2;
   }
   &__ttl-main {
+    @include font-serif;
     font-size: clamp(3rem, (1.25vw + 2.46em), 5rem);
   }
   &__ttl-desc {
-    margin-top: 1em;
+    @include font-serif;
     font-size: 1.07em;
-    opacity: 0.8;
+    color: $color-white-80;
+    margin-top: 1em;
   }
   &__scroll {
     position: absolute;

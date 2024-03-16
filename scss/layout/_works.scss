@@ -38,13 +38,7 @@ style
         transform: scale(1.1);
       }
       .works__ttl {
-        transform: translateY(-120%);
-        * {
-          opacity: 0;
-        }
-        &::after {
-          opacity: 1;
-        }
+        @include animated-link-hover;
       }
     }
   }

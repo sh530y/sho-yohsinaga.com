@@ -7,17 +7,16 @@ style
 ----------------------------*/
 .contact {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 5em;
+  width: 77vw;
   max-width: $width-cont-m;
   margin: 0 auto;
   @include media-tb {
-    flex-direction: column;
-    align-items: center;
     max-width: 46em;
   }
   &__txt-wrap {
-    width: 70%;
     flex-grow: 1;
     @include media-tb {
       width: auto;
@@ -27,12 +26,8 @@ style
     @include font-min;
   }
   &__btn-wrap {
-    width: 50%;
-    flex-grow: 1;
-    @include media-tb {
-      width: 100%;
-      max-width: 400px;
-    }
+    width: 100%;
+    max-width: 300px;
   }
   &__btn {
     margin: 0 auto;

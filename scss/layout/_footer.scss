@@ -23,6 +23,7 @@ style
   }
   &__copy {
     @include font-sans;
+    color: $color-black-50;
     @include media-tb {
       margin: 0 auto;
     }

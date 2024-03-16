@@ -2,10 +2,10 @@
 @use
 ----------------------------*/
 @use "./var" as *;
+
 /*---------------------------
-mixins
+media query
 ----------------------------*/
-// media query
 @mixin media-sp {
   @media screen and (max-width: 667px) {
     @content;
@@ -28,7 +28,9 @@ mixins
     }
   }
 }
-// fonts
+/*---------------------------
+fonts
+----------------------------*/
 @mixin font-ja {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 350; // 100 ~ 900
@@ -58,8 +60,9 @@ mixins
 @mixin sub-text {
   opacity: 0.6;
 }
-
-//position
+/*---------------------------
+position
+----------------------------*/
 @mixin xy-center {
   top: 50%;
   left: 50%;
@@ -89,7 +92,9 @@ mixins
   align-items: center;
 }
 
-// animation
+/*---------------------------
+animation
+----------------------------*/
 @mixin animated-link {
   &__txt-wrap,
   &__ttl-wrap {
@@ -114,22 +119,18 @@ mixins
     opacity: 0;
   }
 }
-@mixin btn-animation {
-  .btn {
-    &__txt {
-      transform: translateY(-120%);
-      * {
-        opacity: 0;
-      }
-      &::after {
-        opacity: 1;
-      }
-    }
-    &__arrow {
-      animation: more-btn__arrow $duration-slow $cb-1;
-    }
+@mixin animated-link-hover {
+  transform: translateY(-120%);
+  * {
+    opacity: 0;
+  }
+  &::after {
+    opacity: 1;
   }
 }
+/*---------------------------
+keyframe
+----------------------------*/
 @keyframes btn__arrow {
   40%,
   50% {

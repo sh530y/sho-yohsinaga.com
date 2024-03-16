@@ -3,7 +3,19 @@
 @use
 ----------------------------*/
 /*---------------------------
-mixins
+media query
+----------------------------*/
+/*---------------------------
+fonts
+----------------------------*/
+/*---------------------------
+position
+----------------------------*/
+/*---------------------------
+animation
+----------------------------*/
+/*---------------------------
+keyframe
 ----------------------------*/
 @-webkit-keyframes btn__arrow {
   40%, 50% {
@@ -111,6 +123,24 @@ style
   .nav {
     font-weight: 400;
   }
+}
+.nav__txt-wrap, .nav__ttl-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.nav__txt, .nav__txt *, .nav__txt::after, .nav__ttl, .nav__ttl *, .nav__ttl::after {
+  -webkit-transition: opacity 650ms, -webkit-transform 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 650ms, -webkit-transform 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 650ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 650ms;
+  transition: transform 650ms cubic-bezier(0.165, 0.84, 0.44, 1), opacity 650ms, -webkit-transform 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.nav__txt::after, .nav__ttl::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 120%;
+  left: 0;
+  right: 0;
+  opacity: 0;
 }
 @media screen and (max-width: 960px) {
   .nav--global {
@@ -226,6 +256,23 @@ style
             flex-direction: column;
   }
 }
+@media (hover: hover) and (pointer: fine) {
+  .nav__link:hover .nav__txt {
+    -webkit-transform: translateY(-120%);
+            transform: translateY(-120%);
+  }
+  .nav__link:hover .nav__txt * {
+    opacity: 0;
+  }
+  .nav__link:hover .nav__txt::after {
+    opacity: 1;
+  }
+  .nav__link:hover .nav__icon {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
 .nav__sns .nav__item:first-child::after {
   content: "";
   display: inline-block;
@@ -234,6 +281,10 @@ style
   margin: 0 1.2em;
   background-color: currentColor;
   opacity: 0.5;
+}
+.nav__sns .nav__icon {
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 /*---------------------------
@@ -523,8 +574,12 @@ style
   font-weight: 400;
   letter-spacing: 0.04em;
   width: 100%;
-  height: 3.5em;
-  border-bottom: 1px solid currentColor;
+  height: 4em;
+  padding: 0 2em;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  -webkit-transition: all 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 @media screen and (max-width: 667px) {
   .btn {
@@ -549,20 +604,13 @@ style
   right: 0;
   opacity: 0;
 }
-.btn--round {
-  height: 4em;
-  padding: 0 2em;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-}
 .btn__arrow {
   height: 0.69em;
   width: 0.69em;
 }
 @media (hover: hover) and (pointer: fine) {
-  .btn:hover .btn {
-    -webkit-transition: all 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
-    transition: all 650ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  .btn:hover {
+    border: 1px solid rgba(31, 33, 38, 0.2);
   }
   .btn:hover .btn__txt {
     -webkit-transform: translateY(-120%);
@@ -969,27 +1017,24 @@ style
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 5em;
+  width: 77vw;
   max-width: 900px;
   margin: 0 auto;
 }
 @media screen and (max-width: 960px) {
   .contact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     max-width: 46em;
   }
 }
 .contact__txt-wrap {
-  width: 70%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1006,16 +1051,8 @@ style
   line-height: 2.25em;
 }
 .contact__btn-wrap {
-  width: 50%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-@media screen and (max-width: 960px) {
-  .contact__btn-wrap {
-    width: 100%;
-    max-width: 400px;
-  }
+  width: 100%;
+  max-width: 300px;
 }
 .contact__btn {
   margin: 0 auto;
@@ -1060,6 +1097,7 @@ style
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0.04em;
+  color: rgba(31, 33, 38, 0.5);
 }
 @media screen and (max-width: 667px) {
   .footer__copy {

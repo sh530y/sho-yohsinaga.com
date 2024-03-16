@@ -7,6 +7,7 @@ style
 ----------------------------*/
 .nav {
   @include font-sans;
+  @include animated-link;
   &--global {
     @include media-tb {
       @include flex-center;
@@ -88,6 +89,17 @@ style
       flex-direction: column;
     }
   }
+  &__link {
+    @include hover {
+      .nav__txt {
+        @include animated-link-hover;
+      }
+      .nav__icon {
+        transform: scale(1.2);
+        opacity: 0.5;
+      }
+    }
+  }
   &__sns {
     .nav__item {
       &:first-child::after {
@@ -99,6 +111,9 @@ style
         background-color: currentColor;
         opacity: 0.5;
       }
+    }
+    .nav__icon {
+      transition: $duration-fast;
     }
   }
 }

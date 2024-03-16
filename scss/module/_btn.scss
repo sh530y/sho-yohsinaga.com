@@ -10,30 +10,21 @@ style
   @include font-sans;
   @include animated-link;
   width: 100%;
-  height: 3.5em;
-  border-bottom: 1px solid currentColor;
-  &--round {
-    height: 4em;
-    padding: 0 2em;
-    border: 1px solid currentColor;
-    border-radius: 999px;
-  }
+  height: 4em;
+  padding: 0 2em;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  transition: all $duration-slow $cb-2;
   &__arrow {
     height: 0.69em;
     width: 0.69em;
   }
   //hover
   @include hover {
+    border: 1px solid $color-black-20;
     .btn {
-      transition: all $duration-slow $cb-2;
       &__txt {
-        transform: translateY(-120%);
-        * {
-          opacity: 0;
-        }
-        &::after {
-          opacity: 1;
-        }
+        @include animated-link-hover;
       }
       &__arrow {
         animation: btn__arrow $duration-slow $cb-1;

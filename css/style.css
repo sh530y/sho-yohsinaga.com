@@ -63,7 +63,7 @@ html {
 }
 
 body {
-  font-size: clamp(1.2rem, 0.25vw + 1.1rem, 1.4rem);
+  font-size: clamp(1.3rem, 0.25vw + 1.2rem, 1.5rem);
   background-color: white;
   color: #1f2126;
 }
@@ -283,8 +283,10 @@ style
   opacity: 0.5;
 }
 .nav__sns .nav__icon {
-  -webkit-transition: 300ms;
-  transition: 300ms;
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: transform 300ms, opacity 300ms;
+  transition: transform 300ms, opacity 300ms, -webkit-transform 300ms;
 }
 
 /*---------------------------
@@ -634,6 +636,25 @@ style
 /*---------------------------
 style
 ----------------------------*/
+.thanks {
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, color-stop(2%, transparent), color-stop(20%, black), color-stop(80%, black), color-stop(98%, transparent));
+  -webkit-mask-image: linear-gradient(to right, transparent 2%, black 20%, black 80%, transparent 98%);
+          mask-image: -webkit-gradient(linear, left top, right top, color-stop(2%, transparent), color-stop(20%, black), color-stop(80%, black), color-stop(98%, transparent));
+          mask-image: linear-gradient(to right, transparent 2%, black 20%, black 80%, transparent 98%);
+}
+.thanks__txt {
+  height: 200px;
+  width: auto;
+  opacity: 0.1;
+  margin-right: 5%;
+}
+
+/*---------------------------
+@use
+----------------------------*/
+/*---------------------------
+style
+----------------------------*/
 .header {
   position: fixed;
   top: 0;
@@ -698,11 +719,6 @@ style
   width: 100%;
   height: 100svh;
 }
-@media screen and (max-width: 960px) {
-  .mv__bg {
-    position: fixed;
-  }
-}
 .mv__bg::after {
   content: "";
   position: absolute;
@@ -710,7 +726,7 @@ style
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000310;
+  background: #000a26;
   mix-blend-mode: multiply;
   opacity: 0.2;
 }
@@ -771,9 +787,6 @@ style
   display: block;
   background-color: #f3f3f4;
 }
-.sec--bg-wh {
-  background-color: white;
-}
 .sec__inner {
   width: 86vw;
   padding-top: clamp(80px, 5vw + 60px, 120px);
@@ -793,11 +806,17 @@ style
 .sec__ttl-ja {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 2.25em;
   font-size: clamp(1rem, 0.25vw + 0.9rem, 1.2rem);
   margin-top: 0.4em;
   opacity: 0.6;
+}
+.sec--contact {
+  padding-bottom: clamp(100px, 5vw + 80px, 140px);
+}
+.sec--contact .sec__inner {
+  background-color: white;
 }
 
 /*---------------------------
@@ -867,7 +886,7 @@ style
 .about__txt {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 2.25em;
 }
 
@@ -998,7 +1017,7 @@ style
 .works__ttl-wrap {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 2.25em;
   font-size: clamp(1.6rem, 0.25vw + 1.5rem, 1.8rem);
   line-height: 1;
@@ -1047,7 +1066,7 @@ style
 .contact__txt {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 2.25em;
 }
 .contact__btn-wrap {

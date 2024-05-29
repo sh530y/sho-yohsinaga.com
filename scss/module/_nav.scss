@@ -113,7 +113,7 @@ style
       }
     }
     .nav__icon {
-      transition: $duration-fast;
+      transition: transform $duration-fast, opacity $duration-fast;
     }
   }
 }

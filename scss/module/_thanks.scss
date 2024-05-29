@@ -1,0 +1,19 @@
+/*---------------------------
+@use
+----------------------------*/
+@use "../global" as *;
+
+/*---------------------------
+style
+----------------------------*/
+.thanks {
+  mask-image: linear-gradient(to right, transparent 2%, black 20%, black 80%, transparent 98%);
+  &__inner {
+  }
+  &__txt {
+    height: 200px;
+    width: auto;
+    opacity: 0.1;
+    margin-right: 5%;
+  }
+}

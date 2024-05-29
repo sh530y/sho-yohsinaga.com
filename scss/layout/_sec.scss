@@ -8,9 +8,6 @@ style
 .sec {
   display: block;
   background-color: $color-light-gary;
-  &--bg-wh {
-    background-color: white;
-  }
   &__inner {
     width: $width-wrapper;
     padding-top: clamp(80px, calc(5vw + 60px), 120px); //80px~120px
@@ -29,5 +26,13 @@ style
     font-size: clamp(1rem, calc(0.25vw + 0.9rem), 1.2rem);
     margin-top: 0.4em;
     opacity: 0.6;
+  }
+  &--contact {
+    padding-bottom: clamp(100px, calc(5vw + 80px), 140px);
+    .sec {
+      &__inner {
+        background-color: white;
+      }
+    }
   }
 }

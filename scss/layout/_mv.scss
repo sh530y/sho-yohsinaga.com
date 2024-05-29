@@ -15,9 +15,6 @@ style
     z-index: -1;
     width: 100%;
     height: 100svh;
-    @include media-tb {
-      position: fixed;
-    }
     &::after {
       content: "";
       position: absolute;
@@ -25,7 +22,7 @@ style
       left: 0;
       width: 100%;
       height: 100%;
-      background: #000310;
+      background: #000a26;
       mix-blend-mode: multiply;
       opacity: 0.2;
     }

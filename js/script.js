@@ -69,6 +69,15 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+$(function () {
+  $(".thanks__inner").infiniteslide({
+    speed: 40, //速さ単位はpx/秒です。
+    direction: "left", //up/down/left/rightから選択
+    pauseonhover: false, //マウスオーバーでストップ
+    responsive: true, //子要素の幅を%で指定しているとき
+    clone: 2, //子要素の複製回数
+  });
+});
 // // 低電力モードで画像に切り替え
 // document.addEventListener("DOMContentLoaded", function () {
 //   const video = document.querySelector(".mv__movie");

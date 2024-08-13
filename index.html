@@ -136,20 +136,7 @@
     <main class="main">
       <!-- main visual -->
       <section class="mv">
-        <div class="mv__bg js-paralax">
-          <video
-            class="mv__movie"
-            src="./video/mv_movie.mp4"
-            poster="./img/mv_bg.jpg"
-            autoplay
-            muted
-            loop
-            playsinline
-            webkit-playsinline
-          >
-            <p>動画を再生できる環境ではありません。</p>
-          </video>
-        </div>
+        <div class="mv__bg js-paralax" id="vanta"></div>
         <h1 class="mv__ttl">
           <p class="mv__ttl-main">SHO YOSHINAGA</p>
           <p class="mv__ttl-desc">Designer / Coder</p>
@@ -365,7 +352,7 @@
           </svg>
         </div>
       </div>
-      <div class="sec__inner" id="vanta">
+      <div class="sec__inner">
         <h2 class="sec__head">
           <p class="sec__ttl">Contact</p>
         </h2>
@@ -480,7 +467,7 @@
     <script src="./js/infiniteslidev2.min.js"></script>
     <script src="./js/lenis.min.js"></script>
     <script src="./js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="./js/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
     <script>
       VANTA.FOG({
